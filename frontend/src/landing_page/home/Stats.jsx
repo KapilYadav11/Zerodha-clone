@@ -1,4 +1,4 @@
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Stats = () => {
   return (
@@ -35,7 +35,13 @@ const Stats = () => {
         </div>
         <div className="mr-35 mb-25 w-[50%] h-[75%]">
           <img src="media/images/ecosystem.png" alt="" />
+           <div className='flex justify-center text-sky-900 items-center gap-20 '>
+          <a className='text-lg hover:text-black hover:scale-120' href="">Explore our products <FontAwesomeIcon icon="arrow-right-long"/> </a>
+          <a className='text-lg hover:text-black hover:scale-120'  href="">Try Kite <FontAwesomeIcon icon="arrow-right-long" /></a>
         </div>
+        </div>
+
+       
       </div>
     </div>
   );
