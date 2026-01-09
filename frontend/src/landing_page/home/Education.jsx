@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Education = () => {
   return (
-    <div className="">
+    <div className="mb-35">
       <div className="flex justify-center gap-25 mt-35">
         <div>
           <img src="media\images\education.svg" alt="" />
