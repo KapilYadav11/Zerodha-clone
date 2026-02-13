@@ -1,6 +1,6 @@
 import React from "react";
 
-const footer = () => {
+const Footer = () => {
   return (
     <div className="mt-40 py-8  gap-60 shadow-[0_10px_20px_rgba(0,0,0,0.1) bg-gray-100 rounded">
       <div className="flex justify-center   ">
@@ -153,11 +153,11 @@ const footer = () => {
         </p>
         <br />
         <p>
-          Attention investors: 1) Stock brokers can accept securities as margins
+          Attention investors: (1) Stock brokers can accept securities as margins
           from clients only by way of pledge in the depository system w.e.f
-          September 01, 2020. 2) Update your e-mail and phone number with your
+          September 01, 2020. (2) Update your e-mail and phone number with your
           stock broker / depository participant and receive OTP directly from
-          depository on your e-mail and/or mobile number to create pledge. 3)
+          depository on your e-mail and/or mobile number to create pledge. (3)
           Check your securities / MF / bonds in the consolidated account
           statement issued by NSDL/CDSL every month.
         </p>
@@ -208,4 +208,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;
