@@ -1,10 +1,9 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { MoveRight } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto px-4 text-center py-12">
+    <div className="container mx-auto px-4 text-center py-12 border-b border-b-gray-200">
       <h1 className="text-4xl font-semibold text-gray-900 mb-3">
         Zerodha Products
       </h1>
