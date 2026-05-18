@@ -17,111 +17,111 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-2 whitespace-nowrap mr-20">
           <h1 className="text-black text-2xl ">Account</h1>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Open demat account
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Minor demat account
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             NRI demat account
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Commodity
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Dematerialisation
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Fund transfer
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             MTF
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             {" "}
             Referral program
           </a>
         </div>
         <div className="flex flex-col gap-2 whitespace-nowrap mr-20">
           <h1 className="text-black text-2xl ">Support</h1>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Contact us
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Support portal
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             How to file a complaint?
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Status of your complaints
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Bulletin
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Circular
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Z-Connect blog
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Downloads
           </a>
         </div>
         <div className="flex flex-col gap-2 whitespace-nowrap mr-20">
           <h1 className="text-black text-2xl ">Company</h1>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             About
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Philosophy
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Press & media
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Careers
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Zerodha Cares (CSR)
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Zerodha.tech
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Open source
           </a>
         </div>
         <div className="flex flex-col gap-2 whitespace-nowrap mr-60">
           <h1 className="text-black text-2xl ">Quick Links</h1>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Upcoming IPOs
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Brokerage charges
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Market holidays
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Economic calendar
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Calculators
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Markets
           </a>
-          <a href="" className="text-gray-500">
+          <a href="" className="text-gray-500   hover:text-[#387ed1] cursor-pointer transition-colors">
             Sectors
           </a>
         </div>
