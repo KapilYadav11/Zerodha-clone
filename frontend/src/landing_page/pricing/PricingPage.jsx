@@ -1,8 +1,15 @@
 import React from 'react'
+import Hero from './Hero'
+import OpenAccount from '../OpenAccount'
+import Brockrage from './Brockrage'
 
 const PricingPage = () => {
   return (
-    <div>PricingPage</div>
+    <div>
+      <Hero />
+      <OpenAccount />
+      <Brockrage />
+    </div>
   )
 }
 
