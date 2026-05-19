@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { holdings } from "../data/data"; // agar data file se lena ho toh iska use karenge aur allHoldings ki jagah pr holdings type karenge 
+import VerticalGraph from "./VerticalGraph";
+//import { holdings } from "../data/data"; // agar data file se lena ho toh iska use karenge aur allHoldings ki jagah pr holdings type karenge 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
@@ -14,6 +15,18 @@ const Holdings = () => {
         console.error("Error fetching holdings:", err);
       });
   }, []);
+
+  const labels = allHoldings.map((subArray) => subArray["name"]);
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Stock Name",
+        data: allHoldings.map((stock) => stock.price),
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+    ],
+  }
 
   return (
     <div className="w-full space-y-6 animate-in fade-in duration-300">
@@ -132,6 +145,7 @@ const Holdings = () => {
           </h5>
         </div>
       </div>
+      <VerticalGraph data={data} />
     </div>
   );
 };

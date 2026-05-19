@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import GeneralContext from "./GeneralContext";
 import { watchlist } from "../data/data";
 import BuyActionWindow from "./BuyActionWindow";
+import DoughnutChart from "./DoughnutChart"; // Imported your chart component
 
 import { Tooltip, Grow } from "@mui/material";
 import {
@@ -13,6 +14,34 @@ import {
 
 const WatchList = () => {
   const generalContext = useContext(GeneralContext);
+
+  const labels = watchlist.map((stock) => stock.name || "Unknown");
+  const chartDataValues = watchlist.map((stock) => {
+    const clearPrice = typeof stock.price === "string" ? stock.price.replace(/,/g, "") : stock.price;
+    return Number(clearPrice) || 0;
+  });
+
+  const doughnutData = {
+    labels,
+    datasets: [
+      {
+        label: "Market Price",
+        data: chartDataValues,
+        backgroundColor: [
+          "rgba(59, 130, 246, 0.6)",   
+          "rgba(16, 185, 129, 0.6)",   
+          "rgba(245, 158, 11, 0.6)",   
+          "rgba(239, 68, 68, 0.6)",    
+          "rgba(139, 92, 246, 0.6)",   
+          "rgba(107, 114, 128, 0.6)",  
+        ],
+        borderColor: [
+          "#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6", "#6b7280"
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
 
   return (
     <div className="w-[350px] min-w-[350px] h-full bg-white border-r border-gray-200 flex flex-col overflow-hidden select-none">
@@ -27,11 +56,20 @@ const WatchList = () => {
         </span>
       </div>
 
-      <ul className="flex-1 overflow-y-auto divide-y divide-gray-50">
-        {watchlist.map((stock, idx) => (
-          <WatchListItem key={idx} stock={stock} />
-        ))}
-      </ul>
+      <div className="flex-1 overflow-y-auto divide-y divide-gray-50 flex flex-col">
+        <ul className="divide-y divide-gray-50">
+          {watchlist.map((stock, idx) => (
+            <WatchListItem key={idx} stock={stock} />
+          ))}
+        </ul>
+
+        <div className="p-4 bg-gray-50/30 border-t border-gray-100 mt-auto">
+          <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 text-center">
+            Watchlist Allocation Weight
+          </h4>
+          <DoughnutChart data={doughnutData} />
+        </div>
+      </div>
 
       {generalContext?.state?.isBuyWindowOpen && (
         <BuyActionWindow uid={generalContext.state.selectedStockUID} />
