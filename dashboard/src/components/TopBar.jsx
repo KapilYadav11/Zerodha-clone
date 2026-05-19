@@ -18,7 +18,7 @@ const TopBar = () => {
 
       <div className="flex items-center gap-3">
         <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-xs font-bold text-blue-500 border border-blue-200">
-          ZU
+          KY
         </div>
         <span className="text-xs font-medium text-gray-600 tracking-wider">USERID</span>
       </div>

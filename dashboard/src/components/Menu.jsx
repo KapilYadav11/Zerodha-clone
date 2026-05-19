@@ -17,7 +17,11 @@ const Menu = () => {
   return (
     <div className="flex items-center justify-between border-b border-gray-100 pb-2 mb-4 select-none">
       <div className="flex items-center gap-8">
-        <img src="media\kite-logo.svg" className="w-7 h-7 object-contain" alt="logo" />
+        <img
+          src="media\kite-logo.svg" 
+          className="w-7 h-7 object-contain"
+          alt="logo"
+        />
         <ul className="flex items-center gap-6">
           {links.map((link, idx) => {
             const isActive = currentPath === link.path;

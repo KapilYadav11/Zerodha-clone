@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { positions } from "../data/data"; // agar data file se lena ho toh iska use karenge aur allPositions ki jagah pr positions type karenge
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { holdings } from "../data/data"; // agar data file se lena ho toh iska use karenge aur allHoldings ki jagah pr holdings type karenge 
 const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
@@ -44,26 +44,43 @@ const Holdings = () => {
 
               const curValue = price * qty;
               const totalCost = avg * qty;
-              const pnl = curValue - totalCost;
-              const isProfit = pnl >= 0;
+              const PnL = curValue - totalCost;
+              const isProfit = PnL >= 0;
 
               return (
-                <tr key={index} className="hover:bg-gray-50/70 transition-colors">
-                  <td className="p-3.5 text-gray-900 font-semibold">{stock.name}</td>
+                <tr 
+                  key={index}
+                  className="hover:bg-gray-50/70 transition-colors"
+                >
+                  <td className="p-3.5 text-gray-900 font-semibold">
+                    {stock.name}
+                  </td>
                   <td className="p-3.5 text-right text-gray-600">{qty}</td>
-                  <td className="p-3.5 text-right text-gray-600">{avg.toFixed(2)}</td>
-                  <td className="p-3.5 text-right text-gray-600">{price.toFixed(2)}</td>
-                  <td className="p-3.5 text-right text-gray-900">{curValue.toFixed(2)}</td>
-
-                  <td className={`p-3.5 text-right font-bold ${isProfit ? "text-green-600" : "text-red-600"}`}>
-                    {pnl.toFixed(2)}
+                  <td className="p-3.5 text-right text-gray-600">
+                    {avg.toFixed(2)}
+                  </td>
+                  <td className="p-3.5 text-right text-gray-600">
+                    {price.toFixed(2)}
+                  </td>
+                  <td className="p-3.5 text-right text-gray-900">
+                    {curValue.toFixed(2)}
                   </td>
 
-                  <td className={`p-3.5 text-right ${stock.net?.startsWith("-") ? "text-red-500" : "text-green-500"}`}>
+                  <td
+                    className={`p-3.5 text-right font-bold ${isProfit ? "text-green-600" : "text-red-600"}`}
+                  >
+                    {PnL.toFixed(2)}
+                  </td>
+
+                  <td
+                    className={`p-3.5 text-right ${stock.net?.startsWith("-") ? "text-red-500" : "text-green-500"}`}
+                  >
                     {stock.net || "0.00%"}
                   </td>
 
-                  <td className={`p-3.5 text-right ${stock.isLoss ? "text-red-500" : "text-green-500"}`}>
+                  <td
+                    className={`p-3.5 text-right ${stock.isLoss ? "text-red-500" : "text-green-500"}`}
+                  >
                     {stock.day || "0.00%"}
                   </td>
                 </tr>
@@ -72,8 +89,11 @@ const Holdings = () => {
 
             {allHoldings.length === 0 && (
               <tr>
-                <td colSpan="8" className="p-8 text-center text-gray-400 font-medium">
-                  No assets currently held in your portfolio portfolio.
+                <td
+                  colSpan="8"
+                  className="p-8 text-center text-gray-400 font-medium"
+                >
+                  No assets currently held in your portfolio.
                 </td>
               </tr>
             )}
@@ -83,23 +103,32 @@ const Holdings = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
         <div className="bg-gray-50 border border-gray-100 rounded-lg p-4 shadow-sm">
-          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Total investment</p>
+          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">
+            Total investment
+          </p>
           <h5 className="text-xl font-bold text-gray-800">
-            29,875.<span className="text-xs font-semibold text-gray-500">15</span>
+            29,875.
+            <span className="text-xs font-semibold text-gray-500">15</span>
           </h5>
         </div>
 
         <div className="bg-gray-50 border border-gray-100 rounded-lg p-4 shadow-sm">
-          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Current value</p>
+          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">
+            Current value
+          </p>
           <h5 className="text-xl font-bold text-gray-800">
-            31,407.<span className="text-xs font-semibold text-gray-500">00</span>
+            31,407.
+            <span className="text-xs font-semibold text-gray-500">00</span>
           </h5>
         </div>
 
         <div className="bg-gray-50 border border-gray-100 rounded-lg p-4 shadow-sm">
-          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Total P&L</p>
+          <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">
+            Total P&L
+          </p>
           <h5 className="text-xl font-bold text-green-600">
-            +1,531.85 <span className="text-xs font-medium text-green-500">(+5.13%)</span>
+            +1,531.85{" "}
+            <span className="text-xs font-medium text-green-500">(+5.13%)</span>
           </h5>
         </div>
       </div>
