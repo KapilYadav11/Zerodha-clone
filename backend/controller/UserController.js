@@ -88,7 +88,6 @@ module.exports.login = async (req, res) => {
 
 module.exports.getProfile = async (req, res) => {
   try {
-    // req.user is set by the auth middleware
     const user = await UserModel.findById(req.user.id)
       .select("-password")
       .populate("orders");
